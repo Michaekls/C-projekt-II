@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0E008D11-2C73-4ECE-AC27-6BFE0AD1494B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>l4p2</RootNamespace>
+    <AssemblyName>l4p2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="F lista koni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F lista koni.Designer.cs">
+      <DependentUpon>F lista koni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F sortowanie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F sortowanie.Designer.cs">
+      <DependentUpon>F sortowanie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="przeciazenie.cs" />
+    <Compile Include="F .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F .Designer.cs">
+      <DependentUpon>F .cs</DependentUpon>
+    </Compile>
+    <Compile Include="F kon wys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F kon wys.Designer.cs">
+      <DependentUpon>F kon wys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F kon poc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F kon poc.Designer.cs">
+      <DependentUpon>F kon poc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F przeciazenie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F przeciazenie.Designer.cs">
+      <DependentUpon>F przeciazenie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kon.cs" />
+    <Compile Include="Kon_pociagowy.cs" />
+    <Compile Include="Kon_wyscigowy.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="F .resx">
+      <DependentUpon>F .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F kon wys.resx">
+      <DependentUpon>F kon wys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F kon poc.resx">
+      <DependentUpon>F kon poc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F przeciazenie.resx">
+      <DependentUpon>F przeciazenie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F lista koni.resx">
+      <DependentUpon>F lista koni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F sortowanie.resx">
+      <DependentUpon>F sortowanie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="AppData.xsc">
+      <DependentUpon>AppData.xsd</DependentUpon>
+    </None>
+    <None Include="AppData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AppData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AppData.xss">
+      <DependentUpon>AppData.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mojabd.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
